@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<link rel="icon" href="https://m.media-amazon.com/images/I/61FqyQB+0hL.jpg" type="image/x-icon"/>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    width: 80%;
+    max-width: 400px;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 60px;
+    background-color: white;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+    
+  }
+  h1 {
+    color: #333;
+  }
+  .buttons {
+    margin-top: 20px;
+  }
+  .buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease-in-out;
+  }
+  .yes {
+    padding: 10px 20px;
+            background-color: rgb(243, 136, 154); /* Changed button color to pink */
+            color: white;
+            border: solid white 1px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+           
+        }
+
+        .yes:hover {
+            background-color: #ff66b2; /* Changed hover color */
+        }
+  .no {
+    background-color: #f44336;
+    color: white;
+  }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ms. Ma. Jannah Kiarra G. Nigos, will you be my valentine?</h1>
+        <div class="buttons">
+          <button class="yes" onclick="answer('Yes')">Yes</button>
+          <button class="no" onmouseover="moveNo()">No</button>
+        </div>
+        <p id="response"></p>
+    </div>
+      
+    <script>
+        function moveNo() {
+            var button = document.querySelector('.no');
+            var maxX = window.innerWidth - button.offsetWidth;
+            var maxY = window.innerHeight - button.offsetHeight;
+            var newX = Math.floor(Math.random() * maxX);
+            var newY = Math.floor(Math.random() * maxY);
+            button.style.position = 'absolute';
+            button.style.left = newX + 'px';
+            button.style.top = newY + 'px';
+        }
+
+        function answer(choice) {
+          if (choice === 'Yes') {
+            window.location.href = 'love.html';
+          } else {
+            document.getElementById('response').innerText = "Maybe next time.";
+          }
+        }
+    </script>
+      
+</body>
+</html>

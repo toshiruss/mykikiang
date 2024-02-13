@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Letter Card</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="https://m.media-amazon.com/images/I/61FqyQB+0hL.jpg" type="image/x-icon"/>
+
+</head>
+
+<body>
+  
+    <style>
+     
+  body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: pink;
+ 
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+ 
+}
+
+.heart {
+  position: absolute;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  background-image: url('heart.png'); 
+  background-size: cover;
+}
+
+.message {
+  padding:5px;
+  text-align: justify; 
+  animation: revealText 5s linear forwards;
+  opacity: 0;
+}
+
+@keyframes revealText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+p {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.5;
+}
+.btn {
+            padding: 10px 20px;
+            background-color: rgb(245, 158, 172);
+            color: white;
+            border: solid white 1px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+           
+        }
+
+        .btn:hover {
+            background-color: #ff66b2; 
+        }
+
+    </style>
+    
+  <div class="card">
+   
+    <div class="heart"></div>
+    
+    <div class="message">
+      <p >My dear love,<br><br> Thank you for accepting my invitation. I just want you to know that I appreciate and love you every day. Thank you, my love, for being the most incredible partner that anyone could ever ask for. I will always be appreciative of your faith, and I will treasure it forever. Let's have a date soon! I love you, and I miss you so much, my love!
+        <br>
+        <br>
+        From the bottom of my heart,
+        <br>
+       
+        Vicenteous</p>
+        
+      <button class="btn btn-danger" onclick="redirectToFlowers()">To claim your prize, click me!</button>
+    </div>
+    
+  </div>
+  <script>
+    function redirectToFlowers() {
+        window.location.href = 'flowers.html';
+    }
+</script>
+
+</body>
+
+</html>
